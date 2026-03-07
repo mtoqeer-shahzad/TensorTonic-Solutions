@@ -9,7 +9,7 @@ def positional_encoding(seq_len, d_model, base=10000.0):
     pos = np.arange(seq_len)[:, np.newaxis]
     i = np.arange(d_model)[np.newaxis, :]
 
-    # use base instead of fixed 10000
+    
     angle_rates = 1 / np.power(base, (2 * (i // 2)) / d_model)
 
     angles = pos * angle_rates
